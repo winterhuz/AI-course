@@ -8,7 +8,7 @@ tags: [jekyll, ai]
 
 期末專題實作: (auto route programming)
 成員: <br>
-![]https://github.com/winterhuz/facenet-pytorch/blob/master/data/test_images/huz/1.jpg?raw=true
+![](https://github.com/winterhuz/facenet-pytorch/blob/master/data/test_images/huz/1.jpg?raw=true)
 
 
 <iframe width="911" height="512" src="https://www.youtube.com/embed/zBu6nEFLTJE" title="2014台灣競速自走車國際賽第一名 台灣 趙師葦 36.618秒" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
