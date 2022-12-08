@@ -8,6 +8,7 @@ tags: [jekyll, ai]
 
 期末專題實作: (auto route programming)
 
+<iframe width="911" height="512" src="https://www.youtube.com/embed/zBu6nEFLTJE" title="2014台灣競速自走車國際賽第一名 台灣 趙師葦 36.618秒" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ---
 ## 自走車路徑規劃
 
