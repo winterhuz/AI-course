@@ -27,7 +27,7 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 -採自：https://blog.csdn.net/JarodYv/article/details/128159913
 
 ### 系統方塊圖
-
+![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPTBLOCK.jpg)
 
 ### 製作步驟 
 1.理解CHAT-GPT的運作原理
@@ -45,6 +45,9 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 ---
 
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT1.jpg)
+![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT2.jpg)
+![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT3.jpg)
+![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT4.jpg)
 
 <br>
 <br>
