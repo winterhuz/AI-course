@@ -13,7 +13,7 @@ tags: [jekyll, ai]
 
 <iframe width="911" height="512" src="https://www.youtube.com/embed/zBu6nEFLTJE" title="2014台灣競速自走車國際賽第一名 台灣 趙師葦 36.618秒" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ---
-## 自走車路徑規劃
+## CHAT-GPT
 
 ### 系統簡介與功能說明
 
@@ -22,13 +22,14 @@ tags: [jekyll, ai]
 
 
 ### 製作步驟 
-1.建立資料集
+1.理解CHAT-GPT的運作原理
 
-2.移植程式
+2.構思模擬目標
 
-3.訓練模型
+3.以各式文字組合試驗
 
 **專題實作步驟:** 
+
 
 
 ---
