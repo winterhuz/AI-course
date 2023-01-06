@@ -9,12 +9,10 @@ tags: [jekyll, ai]
 期末專題實作:
 成員: 翁仲人、張易安 <br>
 ![](https://github.com/winterhuz/facenet-pytorch/blob/master/data/test_images/huz/1.jpg?raw=true)
-
-
-<iframe width="911" height="512" src="https://www.youtube.com/embed/zBu6nEFLTJE" title="2014台灣競速自走車國際賽第一名 台灣 趙師葦 36.618秒" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<br>
 <iframe width="743" height="418" src="https://www.youtube.com/embed/0cnXUcWJ4r4" title="Craziest Chat GPT Generated Stories" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+<br>
+<br>
 
 ---
 ## CHAT-GPT
