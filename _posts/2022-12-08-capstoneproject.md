@@ -12,6 +12,10 @@ tags: [jekyll, ai]
 
 
 <iframe width="911" height="512" src="https://www.youtube.com/embed/zBu6nEFLTJE" title="2014台灣競速自走車國際賽第一名 台灣 趙師葦 36.618秒" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="743" height="418" src="https://www.youtube.com/embed/0cnXUcWJ4r4" title="Craziest Chat GPT Generated Stories" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 ---
 ## CHAT-GPT
 
