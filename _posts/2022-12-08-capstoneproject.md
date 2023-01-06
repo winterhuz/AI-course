@@ -41,13 +41,13 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 **專題實作步驟:** 
 <br>
 1.確認實作目標:<br>
-由本學期的教材網頁作為憑據，希望能生成一份進階課程的教材內容
+由本學期的教材網頁作為憑據，希望能生成一份進階課程的教材內容<br>
 2.從源頭理解工具:<br>
-經由老師提供的教材與搜尋所得了解相關發展歷史與所用技術
+經由老師提供的教材與搜尋所得了解相關發展歷史與所用技術<br>
 3.調參訓練<br>
-不同的用字與敘述方式都會影響回應是否符合期待
+不同的用字與敘述方式都會影響回應是否符合期待<br>
 4.建立網站<br>
-依循回應所得建立完整網頁
+依循回應所得建立完整網頁<br>
 <br>
 本小組成員約一周進行一次線上討論
 並最後決定兩人各自選擇主題進行，再擇日進行學術交流
@@ -59,8 +59,6 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 <br>
 經過多次討論，最終選擇了
 <br>
-
-![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT1.jpg)
 
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT1.jpg)
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT2.jpg)
