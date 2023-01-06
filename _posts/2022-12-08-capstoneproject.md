@@ -43,6 +43,9 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 ---
 ## 系統測試與成果展示
 ---
+
+![](images/CHATGPT1.jpg?raw=true)
+
 <br>
 <br>
 *This site was last updated {{ site.time | date: "%B %d, %Y" }}.*
