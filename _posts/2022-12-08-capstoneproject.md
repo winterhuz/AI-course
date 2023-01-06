@@ -39,13 +39,18 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 3.以各式文字組合試驗
 
 **專題實作步驟:** 
+首先確認實作目標:
+由本學期的教材網頁作為憑據，希望能生成一份進階課程的教材內容
+
+本小組成員約一周進行一次線上討論
 
 
 
 ---
 ## 系統測試與成果展示
 ---
-
+<br>
+經過多次討論，最終選擇了
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT1.jpg)
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT2.jpg)
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT3.jpg)
