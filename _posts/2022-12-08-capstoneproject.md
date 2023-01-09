@@ -25,7 +25,7 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 
 然后创建奖励模型，为了创建强化学习的奖励模型，需要收集对比数据，其中包括两个或多个按质量排序的模型响应。为了收集这些数据，需要进行AI训练师与聊天机器人展开对话，然后随机选择一个模型生成的消息并采样若干替代回答，由AI训练师对其进行排序。利用这种奖励模型，我们可以使用近端策略优化（Proximal Policy Optimization）对模型进行微调。这个过程需要经过多次的迭代。
 ————————————————
-![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPTBLOCK.jpg)
+![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPTBLOCK.jpg?)
 -採自：https://blog.csdn.net/JarodYv/article/details/128159913
 
 ### 系統方塊圖
