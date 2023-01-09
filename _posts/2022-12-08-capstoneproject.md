@@ -59,6 +59,7 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 ---
 <br>
 經過多次思慮，最終將目標訂為在本學期教材的基礎上發展適合下一學期的銜接課程
+
 在仔細觀察本學期教材之後給予指令，對於新學期的架構有以下幾個規則
 
 
