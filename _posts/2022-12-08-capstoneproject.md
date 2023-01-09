@@ -62,6 +62,14 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 在仔細觀察本學期教材之後給予指令，對於新學期的架構有以下幾個規則
 
 <br>
+<table>
+<tr>
+<td><img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT1.jpg"></td>
+<td><img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT2.jpg"></td>
+<td><img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT3.jpg"></td>
+<td><img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT4.jpg"></td>
+</tr>
+</table>
 
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT1.jpg?raw=true)
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT2.jpg?raw=true)
