@@ -23,7 +23,8 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 
 首先用有监督的微调训练一个初始模型：人类AI训练师提供对话，他们既扮演人类用户又扮演AI助手。
 
-然后创建奖励模型，为了创建强化学习的奖励模型，需要收集对比数据，其中包括两个或多个按质量排序的模型响应。为了收集这些数据，需要进行AI训练师与聊天机器人展开对话，然后随机选择一个模型生成的消息并采样若干替代回答，由AI训练师对其进行排序。利用这种奖励模型，我们可以使用近端策略优化（Proximal Policy Optimization）对模型进行微调。这个过程需要经过多次的迭代。
+然后创建奖励模型，为了创建强化学习的奖励模型，需要收集对比数据，其中包括两个或多个按质量排序的模型响应。为了收集这些数据，需要进行AI训练师与聊天机器人展开对话，然后随机选择一个模型生成的消息并采样若干替代回答，由AI训练师对其进行排序。利用这种奖励模型，我们可以使用近端策略优化（Proximal Policy Optimization）对模型进行微调。这个过程需要经过多次的迭代。<br>
+而經過層層訓練後的模型即為CHAT-GPT本身，在輸入端鍵入問題即可獲得回應。但本系統本身不具備絕對真實性，回應中可能出現虛假的答案或虛假的網址。
 ————————————————
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPTBLOCK.jpg?raw=true)
 -採自：https://blog.csdn.net/JarodYv/article/details/128159913
@@ -47,7 +48,7 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 3.調參訓練<br>
 不同的用字與敘述方式都會影響回應是否符合期待<br>
 4.建立網站<br>
-依循回應所得建立完整網頁<br>
+依循回應所得人工建立完整網頁<br>
 <br>
 本小組成員約一周進行一次線上討論
 並最後決定兩人各自選擇主題進行，再擇日進行學術交流
@@ -57,7 +58,9 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 ## 系統測試與成果展示
 ---
 <br>
-經過多次討論，最終選擇了
+經過多次思慮，最終將目標訂為在本學期教材的基礎上發展適合下一學期的銜接課程
+在仔細觀察本學期教材之後給予指令，對於新學期的架構有以下幾個規則
+
 <br>
 
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT1.jpg?raw=true)
