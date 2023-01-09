@@ -61,7 +61,12 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 經過多次思慮，最終將目標訂為在本學期教材的基礎上發展適合下一學期的銜接課程
 
 在仔細觀察本學期教材之後給予指令，對於新學期的架構有以下幾個規則
+1.教材內容不得與上學期重複
 
+2.教材架構需與上學期雷同
+
+3.教材內容需與本學期內容有關連性
+因未付費(沒錢)網站僅提供短篇幅的回覆，因此截圖較為零散
 
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT1.jpg?raw=true)
 <br>
@@ -73,10 +78,8 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 </tr>
 </table>
 
-![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT1.jpg?raw=true)
-![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT2.jpg?raw=true)
-![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT3.jpg?raw=true)
-![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT4.jpg?raw=true)
+架構出現後便再往深入引導。想產生的效果是如同老師的教材一般較少文案簡明扼要的呈現各式資訊。
+
 
 <br>
 <br>
