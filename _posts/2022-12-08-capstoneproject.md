@@ -66,7 +66,7 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 
 2.教材架構需與上學期雷同
 
-3.教材內容需與本學期內容有關連性
+3.教材內容需與本學期內容有關連性<>
 因未付費(沒錢)網站僅提供短篇幅的回覆，因此截圖較為零散
 
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT1.jpg?raw=true)
