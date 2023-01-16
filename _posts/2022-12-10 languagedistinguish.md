@@ -2,7 +2,7 @@
 layout: post
 title: language distinguish
 category: [Example]
-tags: [natral language processing]
+tags: [NLP]
 ---
 
 ##構成技術:
