@@ -4,6 +4,7 @@ title: language distinguish
 category: [Example]
 tags: [natral language processing]
 ---
+
 構成技術:
 語音轉文字（Speech-to-Text）
 語音辨識（Speech Recognition）
