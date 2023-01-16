@@ -37,7 +37,7 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 
 2.構思模擬目標
 
-3.以各式文字組合試驗
+3.以文字組合試驗
 
 **專題實作步驟:** 
 <br>
