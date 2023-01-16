@@ -5,9 +5,10 @@ category: [Example]
 tags: [natral language processing]
 ---
 
-構成技術:
-語音轉文字（Speech-to-Text）
+##構成技術:
+語音轉文字（Speech-to-Text）<br>
 語音辨識（Speech Recognition）
+
 ---
 ##  SpeechRecognition installs
 ```
@@ -20,8 +21,9 @@ Once installed, you should verify the installation by opening an interpreter ses
 '3.8.1'
 ```
 
-[install of speechrecognition](https://realpython.com/python-speech-recognition/)
+[install of speechrecognition](https://realpython.com/python-speech-recognition/)<br>
 [install of pydub](https://pypi.org/project/pydub/)
+
 ---
 ## usage of tools
 [Google Speech API的使用教程](https://cloud.google.com/speech-to-text/docs/reference/libraries)
@@ -29,9 +31,9 @@ Once installed, you should verify the installation by opening an interpreter ses
 
 ## how does it work
 <iframe width="573" height="322" src="https://www.youtube.com/embed/2Vf1D-rUMwE" title="Getting Started With Cloud Firestore on the Web - Firecasts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-(https://www.instructables.com/id/Voice-Controlled-Home-Automation-Using-Raspberry-Pi/)
-(https://towardsdatascience.com/how-to-convert-speech-to-text-with-python-e78f88f7b2c5)
-(https://realpython.com/python-speech-recognition/)
+[(https://www.instructables.com/id/Voice-Controlled-Home-Automation-Using-Raspberry-Pi/)](https://www.instructables.com/id/Voice-Controlled-Home-Automation-Using-Raspberry-Pi/)<br>
+[https://towardsdatascience.com/how-to-convert-speech-to-text-with-python-e78f88f7b2c5](https://towardsdatascience.com/how-to-convert-speech-to-text-with-python-e78f88f7b2c5)<br>
+[https://realpython.com/python-speech-recognition/](https://realpython.com/python-speech-recognition/)<br>
 
 <br>
 <br>    
