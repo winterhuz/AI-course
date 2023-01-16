@@ -27,7 +27,7 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 而經過層層訓練後的模型即為CHAT-GPT本身，在輸入端鍵入問題即可獲得回應。但本系統本身不具備絕對真實性，回應中可能出現虛假的答案或虛假的網址。<br>
 ————————————————
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPTBLOCK.jpg?raw=true)
--採自：https://blog.csdn.net/JarodYv/article/details/128159913
+_posts/2022-12-10 languagedistinguish.md
 
 ### 系統方塊圖
 
