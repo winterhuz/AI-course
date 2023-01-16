@@ -31,7 +31,7 @@ Once installed, you should verify the installation by opening an interpreter ses
 
 ## how does it work
 <iframe width="573" height="322" src="https://www.youtube.com/embed/2Vf1D-rUMwE" title="Getting Started With Cloud Firestore on the Web - Firecasts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-[(https://www.instructables.com/id/Voice-Controlled-Home-Automation-Using-Raspberry-Pi/)](https://www.instructables.com/id/Voice-Controlled-Home-Automation-Using-Raspberry-Pi/)<br>
+[https://www.instructables.com/id/Voice-Controlled-Home-Automation-Using-Raspberry-Pi/](https://www.instructables.com/id/Voice-Controlled-Home-Automation-Using-Raspberry-Pi/)<br>
 [https://towardsdatascience.com/how-to-convert-speech-to-text-with-python-e78f88f7b2c5](https://towardsdatascience.com/how-to-convert-speech-to-text-with-python-e78f88f7b2c5)<br>
 [https://realpython.com/python-speech-recognition/](https://realpython.com/python-speech-recognition/)<br>
 
