@@ -84,7 +84,7 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 
 
 接著經由人工製作產生的網頁如下<br>
-![語音辨識](https://winterhuz.github.io/AI-course/lecture/2023/01/01/languagedistinguise.html)
+[語音辨識](https://winterhuz.github.io/AI-course/lecture/2023/01/01/languagedistinguise.html)
 <br>
 <br>
 
