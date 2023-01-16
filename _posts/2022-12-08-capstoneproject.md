@@ -80,9 +80,10 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 </table>
 
 架構出現後便再往深入引導。想產生的效果是如同老師的教材一般較少文案且能簡明扼要的呈現各式資訊。
-<img width="419" alt="image" src="https://user-images.githubusercontent.com/100844817/212695547-1b9da5ad-220c-4ba5-9b21-858f8a709292.png?raw=true">
+<img width="476" alt="image" src="https://user-images.githubusercontent.com/100844817/212696063-879d5014-e980-4d22-9c77-6f4a7f61a9e2.png?raw=true">
 
-接著經由人工製作產生的網頁如下
+
+接著經由人工製作產生的網頁如下<br>
 ![語言辨識](https://winterhuz.github.io/AI-course/lecture/2023/01/01/languagedistinguise.html)
 <br>
 <br>
