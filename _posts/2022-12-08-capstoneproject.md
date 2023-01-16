@@ -82,7 +82,7 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 架構出現後便再往深入引導。想產生的效果是如同老師的教材一般較少文案簡明扼要的呈現各式資訊。
 
 
-![](https://winterhuz.github.io/AI-course/lecture/2023/01/01/languagedistinguise.html)
+![語言辨識](https://winterhuz.github.io/AI-course/lecture/2023/01/01/languagedistinguise.html)
 <br>
 <br>
 
