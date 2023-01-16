@@ -18,7 +18,8 @@ Once installed, you should verify the installation by opening an interpreter ses
 >>> import speech_recognition as sr
 >>> sr.__version__
 '3.8.1'
-ˋˋˋ
+```
+
 [install of speechrecognition](https://realpython.com/python-speech-recognition/)
 [install of pydub](https://pypi.org/project/pydub/)
 ---
