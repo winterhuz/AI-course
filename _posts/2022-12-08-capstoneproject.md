@@ -84,7 +84,7 @@ _posts/2022-12-10 languagedistinguish.md
 
 
 接著經由人工製作產生的網頁如下<br>
-[語音辨識](https://winterhuz.github.io/AI-course/lecture/2023/01/01/languagedistinguish.html)
+[語音辨識](https://winterhuz.github.io/AI-course/lecture/2022/12/10/languagedistinguish.html)
 2023-01-01 languagedistinguish
 <br>
 <br>
