@@ -73,9 +73,9 @@ ChatGPT采用人类反馈强化学习（Reinforcement Learning from Human Feedba
 <br>
 <table>
 <tr>
-<td><img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT2.jpg"></td>
-<td><img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT3.jpg"></td>
-<td><img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT4.jpg"></td>
+<td><img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT2.jpg?raw=true"></td>
+<td><img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT3.jpg?raw=true"></td>
+<td><img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/CHATGPT4.jpg?raw=true"></td>
 </tr>
 </table>
 
