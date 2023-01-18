@@ -85,7 +85,12 @@ _posts/2022-12-10 languagedistinguish.md
 
 接著經由人工製作產生的網頁如下<br>
 [語音辨識](https://winterhuz.github.io/AI-course/example/2022/12/22/languagedis.html)
-2023-01-01 languagedistinguish
+2022-12-22 languagedistinguish<br>
+
+在探索過程中也發現chat-gpt可以用文字引導生成"利用linux語言完成特定任務"的內容。<br>
+以上特點或許可以在未來幫助教師更快的達成目的。
+
+本次期末作業的實作部分如上述所示，而剩下的部分將會是本人於寒假的自我規劃。利用本學期所學的技術更好的吸收新知，並一步步完成十四週的未來教材內容，並將無限制地提供給未來有需要的人使用。
 <br>
 <br>
 
