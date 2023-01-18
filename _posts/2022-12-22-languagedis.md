@@ -5,7 +5,7 @@ category: [Example]
 tags: [NLP]
 ---
 
-## 構成技術:<>
+## 構成技術:<br>
 語音轉文字（Speech-to-Text）<br>
 語音辨識（Speech Recognition）
 
