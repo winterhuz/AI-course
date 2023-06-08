@@ -5,7 +5,9 @@
 一個是一次用一個系統，一個是兩系統同時跑，效能不好顯而易見的  
 雙系統最大的問題還是匹配性，建議多查查自己顯卡與ubuntu版本號能不能對上  
 另外一個影響的要素是系統BIOS模式，以下方法僅適用新式UEFI模式  
-Win+R 輸入`msinfo32`  即可查看
+Win+R 輸入`msinfo32`  即可查看  
+
+<img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/doublesystem_safety3.png" width="600"/>   
 
 
 本人配置:
@@ -76,8 +78,9 @@ win11在主頁找 "電腦管理"-> "磁碟管理"  ，或直接 win+X-> K
 這時候特別關鍵了，畫面會先亮一下隨即又暗下去，暗下去之後馬上點擊啟動鍵應該就成了，不行就多試幾次  
 之所以這麼麻煩是因為hp的F10點進去只是個選單，BIOS設定是F10，boot manager是F9， 不小心多點或時間沒抓好就要重來...  
 
-總之進入BIOS模式後要調整兩項，首先是security的 secure boot 設定為 Disable
-再來
+總之進入BIOS模式後要調整兩項  
+首先是security的 secure boot 設定為 `Disable`
+再來USB UEFI設為enable
 
 
                                          
