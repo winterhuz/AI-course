@@ -4,6 +4,9 @@
 雙系統跟虛擬機最大的不同就是雙系統本身並不影響電腦效能  
 一個是一次用一個系統，一個是兩系統同時跑，效能不好顯而易見的  
 雙系統最大的問題還是匹配性，建議多查查自己顯卡與ubuntu版本號能不能對上  
+另外一個影響的要素是系統BIOS模式，以下方法僅適用新式UEFI模式  
+Win+R 輸入`msinfo32`  即可查看
+
 
 本人配置:
 
@@ -22,7 +25,7 @@
 ## 一、磁碟配置 
 雙系統與虛擬機基本都是在電腦上給你隔一區來搞耍  
 只是雙系統要自己動手，現在來檢查自個的硬碟配置吧  
-win11在主頁找 "電腦管理"-> "磁碟管理"  
+win11在主頁找 "電腦管理"-> "磁碟管理"  ，或直接 win+X-> K
 
 <img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/doublesystem_storage.png" width="600"/>  
 
@@ -57,14 +60,26 @@ win11在主頁找 "電腦管理"-> "磁碟管理"
 首先來到  設定-> 隱私權與安全性-> 裝置加密   
 一般家用版都是這個畫面，那如果你是專業版的就需要在同位置關閉bitlocker了  
 
-<img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/doublesystem_safety1.png" width="600"/>  
+<img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/doublesystem_safety1.png" width="400"/>  
                                                                                                             
 把這個加密給關了，點擊關閉之後會開始讀條並顯示"可以繼續使用電腦..blalba"  
-通常要等頗長一段時間，那我們就繼續操作
+通常要等頗長一段時間，那我們就繼續操作  
+
+主頁打開 控制台-> 硬體與音效-> 電源選項-> 系統設定(左方選擇"按下電源按鈕時的行為")  
+把快速啟動關閉，這邊會這麼做是為了方便我們進入BIOS模式設定
                                          
 <img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/doublesystem_safety2.png" width="600"/>   
-                                      
-                                         
+
+這邊要去查一下自己電腦的BIOS模式的啟動按鈕，像hp就是F10，有些廠牌是F9或F12  
+要進入BIOS模式首先要把電腦關了，在他開機的那段時間瘋狂點擊啟動鍵  
+這邊分享我失敗多次的經驗總結，點擊重新啟動後會執行關機程序，一旦畫面上的文字消失了就是徹底關機準備開機  
+這時候特別關鍵了，畫面會先亮一下隨即又暗下去，暗下去之後馬上點擊啟動鍵應該就成了，不行就多試幾次  
+之所以這麼麻煩是因為hp的F10點進去只是個選單，BIOS設定是F10，boot manager是F9， 不小心多點或時間沒抓好就要重來...  
+
+總之進入BIOS模式後要調整兩項，首先是security的 secure boot 設定為 Disable
+再來
+
+
                                          
 
 
