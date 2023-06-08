@@ -57,12 +57,12 @@ win11在主頁找 "電腦管理"-> "磁碟管理"
 首先來到  設定-> 隱私權與安全性-> 裝置加密   
 一般家用版都是這個畫面，那如果你是專業版的就需要在同位置關閉bitlocker了  
 
-<img src=(https://github.com/winterhuz/AI-course/blob/gh-pages/images/doublesystem_safety1.png)" width="600"/>  
+<img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/doublesystem_safety1.png" width="600"/>  
                                                                                                             
 把這個加密給關了，點擊關閉之後會開始讀條並顯示"可以繼續使用電腦..blalba"  
 通常要等頗長一段時間，那我們就繼續操作
                                          
-<img src=(https://github.com/winterhuz/AI-course/blob/gh-pages/images/doublesystem_safety1.png)" width="600"/>   
+<img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/doublesystem_safety2.png" width="600"/>   
                                       
                                          
                                          
