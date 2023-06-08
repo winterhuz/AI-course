@@ -45,10 +45,24 @@ win11在主頁找 "電腦管理"-> "磁碟管理"
 ## 二、雙系統下載
 
 雙系統下載有三類方式  
+
 *虛擬機(WSL、VM)  
 *wubi  
 *USB式  
 
-我這邊使用usb硬碟式安裝  
-簡單來說就是把ubuntu載進usb裡邊，趁系統不注意，大力給他督進去
+我這邊使用USB硬碟式安裝  
+簡單來說就是把ubuntu載進usb裡邊，趁系統不注意，大力給他督進去  
+當然Windows肯定也是有所防備，那我們就要慢慢讓他卸下心防  
+
+首先來到  設定-> 隱私權與安全性-> 裝置加密   
+一般家用版都是這個畫面，那如果你是專業版的就需要在同位置關閉bitlocker了  
+
+<img src="https://github.com/winterhuz/AI-course/blob/gh-pages/images/doublesystem_storage.png" width="600"/>   
+
+把這個加密給關了，點擊關閉之後會開始讀條並顯示"可以繼續使用電腦..blalba"  
+通常要等頗長一段時間，那我們就繼續操作  
+
+
+
+
 
