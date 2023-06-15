@@ -4,7 +4,8 @@
 #include <Ultrasonic.h>
 #include <SimpleDHT.h> 
 #include <Wire.h>
-
+`
+`
 //超音波設定
 Ultrasonic ultrasonic1(4,17);
 Ultrasonic ultrasonic2(27,34);
@@ -15,7 +16,8 @@ int distance2;
 int distance3;
 int distance4;
 int frontobstacle;
-
+`
+`
 // 馬達引脚
 #define L298N_IN1   32
 #define L298N_IN2   33
@@ -25,7 +27,8 @@ int frontobstacle;
 #define motorspeed2  120         //新電池雙120，延遲350ms差不多
 #define L298N_ENA   25
 #define L298N_ENB   23
-
+`
+`
 // 馬達转向
 int direct = 0; //0上;1左;2下;3右
 const int forward = HIGH;
@@ -36,7 +39,8 @@ void turnright();
 void turnleft();
 void pausee();
 void goabit();
-
+`
+`
 //溫溼度
 int pinDHT11 = 19;//GPIOPIN
 SimpleDHT11 dht11;
@@ -52,7 +56,8 @@ int targetX = 9;
 int targetY = 5;
 int openListCount = 0;
 int closedListCount = 0;
-
+`
+`
 
 //建立地圖
 #define GRID_SIZE 10
@@ -71,7 +76,8 @@ struct Node {
   int h;
   Node* parent;
 };
-
+`
+`
 Node* openList[GRID_SIZE * GRID_SIZE];
 Node* closedList[GRID_SIZE * GRID_SIZE];
 Node* currentNode;
@@ -134,7 +140,8 @@ void findPath(){
 void botfollowPath(Node* targetNode);
 
 
-
+`
+`
 //I2C Slave sender receive
 #define I2C_SLAVE_ADDR 0x0a
 #define datasize 12
@@ -146,7 +153,8 @@ byte data[datasize];           //接收陣列
 //座標
 int x,y;
 
-
+`
+`
 //主程式開始
 
 void setup()
@@ -213,7 +221,7 @@ void loop()
        runtime = millis();
     }
 }
-
+`
 
 
 
