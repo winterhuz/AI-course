@@ -1,5 +1,5 @@
 
-
+'
 #include <NewPing.h>
 #include <Ultrasonic.h>
 #include <SimpleDHT.h> 
@@ -670,3 +670,4 @@ void receiveEvent(int numBytes){  //I2C接收函式
       data[i] = Wire.read(); // 讀取datasize個字節
   }
 }
+'
