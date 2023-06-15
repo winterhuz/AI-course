@@ -1,10 +1,9 @@
 
-
+`
 #include <NewPing.h>
 #include <Ultrasonic.h>
 #include <SimpleDHT.h> 
 #include <Wire.h>
-
 
 //超音波設定
 Ultrasonic ultrasonic1(4,17);
@@ -671,3 +670,4 @@ void receiveEvent(int numBytes){  //I2C接收函式
   }
 }
 
+`
