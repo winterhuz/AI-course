@@ -7,6 +7,8 @@ using opencv cause less problem since the packages like python, can build inside
 we can use simple function provided by opencv to complete this project
 and I will cut it into 3 part to show you how to do it.
 
-###  1.color identified
-###  2.rail of pen
-###  3.outcome and infix
+###  1.image transform
+###  2.color identified
+###  3.rail of pen, outcome and infix
+
+
