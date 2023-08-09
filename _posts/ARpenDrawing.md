@@ -1,21 +1,31 @@
 # OPENCV_PROjECT
 
-first of all, I'm usung opencv as the invironment  
-using opencv cause less problem since the packages like python, can build inside of opencv
+剛好在網上看到一個道士憑空畫符的短影片，朱紅符咒循著道士的手指揮灑虛空    
+特效挺不錯就想著試試看    
 
 
-we can use simple function provided by opencv to complete this project   
-and I will cut it into 3 part to show you how to do it.
+拆解一下，大概分成兩個步驟   
 
-  
+一、辨識手指  
+二、文字隨手指出現並停留
+
+
+第一點打算用簡單一點的顏色辨識來完成  
+接著將影片分為無數揁，每一揁都辨識出手指的位置  
+得出手指位置在畫面的座標後，在該座標上畫一個小圓  
+隨著影片撥放
+
 *  1.image transform
 *  2.color identified
 *  3.rail of pen, outcome and infix
 
-In this project, the only package needed is opencv-python
+In this project, the only package needed is "opencv-python"
 install it at the "python package", then we can started.
 
-## 1.image transform
+
+
+
+# 1.image transform
 First, I will show some functions that is available to stretch pictures
 
     cv2.imread('img route')
