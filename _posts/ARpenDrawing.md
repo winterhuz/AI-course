@@ -27,9 +27,34 @@ install it at the "python package", then we can started.
 
 
 
-# 1.image transform
-First, here's some functions that is available to stretch pictures
+# 1.color detection
 
+在電腦視覺中，所有的"顏色"都是用**特定參數組**表示的    
+差別只在於使用的哪種空間而已    
+
+
+直接上範例
+
+![]()  
+
+以上圖黃色而言
+RGB空間以(255,255,0)標記 ; 而HSV以(60,100,100)標記
+
+
+再來一張  
+![]()  
+  
+這是比較黯淡的黃色  
+RGB空間以(230,230,0)標記 ; 而HSV以(60,100,90)標記  
+  
+RGN空間的參數各自代表(紅，綠，藍) ; HSV空間的參數代表(色相，飽和度，明度)  
+  
+RGB在面對明度改變時三項皆會有牽連，而HSV則是單獨改動一數值  
+因為同個物體拍攝角度不同時在畫面上通常會在**明度**上有明顯差異，所以通常使用HSV空間來處理圖像  
+
+
+
+  
     cv2.imread('img route')
 "imgroute" stand for the complete route of the picture
 
