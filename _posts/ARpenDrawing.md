@@ -6,10 +6,10 @@
 
 拆解一下，大概分成兩個步驟   
 
-一、辨識手指  
-二、文字隨手指出現並停留
-  
-  
+-辨識手指  
+-文字隨手指出現並停留
+    
+    
 第一點打算用簡單一點的顏色辨識來完成  
 接著將影片分為無數揁，每一揁都辨識出手指的位置  
 得出手指位置在畫面的座標後，在該座標上畫一個小圓  
@@ -26,12 +26,10 @@ install it at the "python package", then we can started.
 
 
 # 1.image transform
-First, I will show some functions that is available to stretch pictures
+First, here's some functions that is available to stretch pictures
 
     cv2.imread('img route')
 "imgroute" stand for the complete route of the picture
-put your picture in the same fold of your project file
-then "img route" will be the name of the picture.
 
 
     cv2.resize(img, (x,y))
