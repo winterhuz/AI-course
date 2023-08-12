@@ -92,7 +92,7 @@ RGB在面對明度改變時三項皆會有牽連，而HSV則是單獨改動一�
         cv2.imshow('result', result)
         cv2.waitKey(1)
 
-
+1
 
         
     cv2.imread('img route')
@@ -114,3 +114,51 @@ RGB在面對明度改變時三項皆會有牽連，而HSV則是單獨改動一�
 "rotatecode" stands for 3 different code as "cv2.ROTATE_90_COUNTERCLOCKWISE","cv2.ROTATE_90_CLOCKWISE","cv2.ROTATE_180"
 
     cv2.cvtColor(img,)
+    
+1    
+    def findPen(img):
+        #    img = cv2.resize(img, (0, 0), fx=0.05, fy=0.05)
+        hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    
+        lower = np.array([93, 56, 70])
+        upper = np.array([157, 194, 229])
+    
+        mask = cv2.inRange(hsv, lower, upper)
+        result = cv2.bitwise_and(img, img, mask=mask)
+        penx, peny = findContour(mask)
+        cv2.circle(imgContour, (penx, peny), 5, (253, 176, 192), cv2.FILLED)
+    
+        if peny!=-1:
+            drawPoints.append([penx, peny])
+1
+    def findContour(img):
+        contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+        x, y, w, h = -1, -1, -1, -1
+        for cnt in contours:
+     #       cv2.drawContours(imgContour, cnt, -1, (255, 0, 0), 2)
+            area = cv2.contourArea(cnt)
+            if area > 10:
+                peri = cv2.arcLength(cnt, True)
+                vertices = cv2.approxPolyDP(cnt, peri * 0.02, True)
+                x, y, w, h = cv2.boundingRect(vertices)
+    
+        return x, y
+    
+    def draw(drawPoints):
+        for point in drawPoints:
+            cv2.circle(imgContour, (point[0], point[1]), 15, (253, 176, 192), cv2.FILLED)
+        
+    while True:
+        ret, frame = cap.read()
+    
+        if ret:
+    
+            frame = cv2.resize(frame, (0, 0), fx=0.4, fy=0.4)
+            imgContour = frame.copy()
+            findPen(frame)
+            draw(drawPoints)
+            cv2.imshow('contour', imgContour)
+        else:
+            break
+        if cv2.waitKey(20) == ord('q'):
+            break
