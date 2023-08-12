@@ -65,7 +65,7 @@ RGB在面對明度改變時三項皆會有牽連，而HSV則是單獨改動一�
     cv2.createTrackbar('sat min', 'Trackbar', 0, 255, empty)
     cv2.createTrackbar('sat max', 'Trackbar', 255, 255, empty)
     cv2.createTrackbar('val min', 'Trackbar', 0, 255, empty)
-    cv2.createTrackbar('val max', 'Trackbar', 255, 255, empty)''
+    cv2.createTrackbar('val max', 'Trackbar', 255, 255, empty)
 
     while True:
         hmin = cv2.getTrackbarPos('Hue min', 'Trackbar')
@@ -85,6 +85,9 @@ RGB在面對明度改變時三項皆會有牽連，而HSV則是單獨改動一�
     
         mask = cv2.inRange(hsv, lower, upper)
         result = cv2.bitwise_and(img, img, mask=mask)
+
+
+        
     cv2.imread('img route')
 "imgroute" stand for the complete route of the picture
 
