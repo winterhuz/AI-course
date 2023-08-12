@@ -57,17 +57,34 @@ RGB在面對明度改變時三項皆會有牽連，而HSV則是單獨改動一�
     import numpy as np
 
 
-''cv2.namedWindow('Trackbar')
-cv2.resizeWindow('Trackbar', 640, 320)
+    cv2.namedWindow('Trackbar')
+    cv2.resizeWindow('Trackbar', 640, 320)
 
-cv2.createTrackbar('Hue min', 'Trackbar', 0, 179, empty)
-cv2.createTrackbar('Hue max', 'Trackbar', 179, 179, empty)
-cv2.createTrackbar('sat min', 'Trackbar', 0, 255, empty)
-cv2.createTrackbar('sat max', 'Trackbar', 255, 255, empty)
-cv2.createTrackbar('val min', 'Trackbar', 0, 255, empty)
-cv2.createTrackbar('val max', 'Trackbar', 255, 255, empty)''
+    cv2.createTrackbar('Hue min', 'Trackbar', 0, 179, empty)
+    cv2.createTrackbar('Hue max', 'Trackbar', 179, 179, empty)
+    cv2.createTrackbar('sat min', 'Trackbar', 0, 255, empty)
+    cv2.createTrackbar('sat max', 'Trackbar', 255, 255, empty)
+    cv2.createTrackbar('val min', 'Trackbar', 0, 255, empty)
+    cv2.createTrackbar('val max', 'Trackbar', 255, 255, empty)''
 
-
+    while True:
+        hmin = cv2.getTrackbarPos('Hue min', 'Trackbar')
+        hmax = cv2.getTrackbarPos('Hue max', 'Trackbar')
+        smin = cv2.getTrackbarPos('sat min', 'Trackbar')
+        smax = cv2.getTrackbarPos('sat max', 'Trackbar')
+        vmin = cv2.getTrackbarPos('val min', 'Trackbar')
+        vmax = cv2.getTrackbarPos('val max', 'Trackbar')
+        print(hmin, hmax, smin, smax, vmin, vmax)
+    
+        ret, img = cap.read()
+    #    img = cv2.resize(img, (0, 0), fx=0.05, fy=0.05)
+        hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    
+        lower = np.array([hmin, smin, vmin])
+        upper = np.array([hmax, smax, vmax])
+    
+        mask = cv2.inRange(hsv, lower, upper)
+        result = cv2.bitwise_and(img, img, mask=mask)
     cv2.imread('img route')
 "imgroute" stand for the complete route of the picture
 
