@@ -86,6 +86,13 @@ RGB在面對明度改變時三項皆會有牽連，而HSV則是單獨改動一�
         mask = cv2.inRange(hsv, lower, upper)
         result = cv2.bitwise_and(img, img, mask=mask)
 
+        cv2.imshow('img', img)
+     #   cv2.imshow('hsv', hsv)
+        cv2.imshow('mask', mask)
+        cv2.imshow('result', result)
+        cv2.waitKey(1)
+
+
 
         
     cv2.imread('img route')
