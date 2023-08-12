@@ -53,9 +53,8 @@ RGB在面對明度改變時三項皆會有牽連，而HSV則是單獨改動一�
 因為同個物體拍攝角度不同時在畫面上通常會在**明度**上有明顯差異，所以通常使用HSV空間來處理圖像  
 
 
-
-  ''import cv2
-import numpy as np''  
+    import cv2
+    import numpy as np
 
 
 ''cv2.namedWindow('Trackbar')
