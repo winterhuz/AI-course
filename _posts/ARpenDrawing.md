@@ -131,6 +131,7 @@ RGB在面對明度改變時三項皆會有牽連，而HSV則是單獨改動一�
         if peny!=-1:
             drawPoints.append([penx, peny])
 1
+
     def findContour(img):
         contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
         x, y, w, h = -1, -1, -1, -1
