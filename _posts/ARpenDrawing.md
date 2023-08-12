@@ -53,9 +53,26 @@ RGB在面對明度改變時三項皆會有牽連，而HSV則是單獨改動一�
 因為同個物體拍攝角度不同時在畫面上通常會在**明度**上有明顯差異，所以通常使用HSV空間來處理圖像  
 
 
+顏色辨識這邊基本思路如下  
+1. 將RGB圖像空間轉到適合cv的HSV空間
+2. 找出欲辨識物體的HSV參數範圍
+3. 標記欲辨識物體
+
+   
+來 ~ 開電腦   
+這次引用的函式庫有二，opencv的cv2函式庫及python numpy的 numpy  
+
     import cv2
     import numpy as np
 
+
+說了嘛，圖片要從RGB空間轉到HSV空間，有了cv2函式庫其實也就一段話的事
+
+    img = cv2.imread('連結.jpg')
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+
+接下來的操作是建一個用來調整參數範圍的控制台  
+在這控制台上可以調整HSV三個參數的上下限，藉此鎖定物體  
 
     cv2.namedWindow('Trackbar')
     cv2.resizeWindow('Trackbar', 640, 320)
@@ -75,24 +92,25 @@ RGB在面對明度改變時三項皆會有牽連，而HSV則是單獨改動一�
         vmin = cv2.getTrackbarPos('val min', 'Trackbar')
         vmax = cv2.getTrackbarPos('val max', 'Trackbar')
         print(hmin, hmax, smin, smax, vmin, vmax)
-    
-        ret, img = cap.read()
-    #    img = cv2.resize(img, (0, 0), fx=0.05, fy=0.05)
-        hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-    
+
         lower = np.array([hmin, smin, vmin])
         upper = np.array([hmax, smax, vmax])
     
+  
+這樣一來就得到一個小小控制視窗拉   
+再建兩個視窗用以可視化調整HSV參數範圍      
+mask   以白色表示HSV範圍以內的圖像，黑色為範圍外       
+result 經剔除HSV範圍後的彩色圖片    
+    
+
         mask = cv2.inRange(hsv, lower, upper)
         result = cv2.bitwise_and(img, img, mask=mask)
 
         cv2.imshow('img', img)
-     #   cv2.imshow('hsv', hsv)
         cv2.imshow('mask', mask)
         cv2.imshow('result', result)
         cv2.waitKey(1)
 
-1
 
             
         cv2.imread('img route')
