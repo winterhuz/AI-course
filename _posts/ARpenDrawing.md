@@ -111,6 +111,7 @@ result 經剔除HSV範圍後的彩色圖片
         cv2.waitKey(1)
 
 這邊紀錄一下幾個基本語法  
+        
         cv2.imread('img route')
     "imgroute" stand for the complete route of the picture
         cv2.resize(img, (x,y))
