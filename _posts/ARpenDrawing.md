@@ -128,7 +128,9 @@ result 經剔除HSV範圍後的彩色圖片
 
     cv2.cvtColor(img,)
     
-1    
+目前為止我們已經可以辨識出特定的顏色，但要精確辨識出位置還要經過一個步驟
+
+
     def findPen(img):
         #    img = cv2.resize(img, (0, 0), fx=0.05, fy=0.05)
         hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
