@@ -125,12 +125,13 @@ result 經剔除HSV範圍後的彩色圖片
     "y" stands for the rate of height, 1 as origin height
         cv2.rotate(img, rotatecode)
     "img" stands for your photo
-    "rotatecode" stands for 3 different code as "cv2.ROTATE_90_COUNTERCLOCKWISE","cv2.ROTATE_90_CLOCKWISE","cv2.ROTATE_180"
+    "rotatecode" stands for codes as "cv2.ROTATE_90_COUNTERCLOCKWISE","cv2.ROTATE_90_CLOCKWISE","cv2.ROTATE_180"
 
     cv2.cvtColor(img,)
     
-目前為止我們已經可以辨識出特定的顏色，但圖片中可能會在別的地方也出現一樣的顏色，可能是噪點或其他物體，這時我們限制一下範圍以免誤判  
-這邊順帶將辨識出的物體框起來以利察看  
+目前為止我們已經可以辨識出特定的顏色，但圖片中可能會在別的地方也出現一樣的顏色  
+可能是噪點或其他物體，這時我們限制一下大小範圍以免誤判  
+這邊順帶將辨識出的物體描邊並紀錄座標   
 
 
     def findPen(img):
@@ -161,6 +162,14 @@ result 經剔除HSV範圍後的彩色圖片
                 x, y, w, h = cv2.boundingRect(vertices)
     
         return x, y
+
+        contours, hierarchy = cv2.findcontours(img, mode, method)
+    "img" stands for binary image(black and white)  
+    "mode" stands for the way to search the contour.  
+    "method" stands for the way to approximate the contour.  
+    "contours" is a list of contour points,(n,x,y) as nst point and the coordinate.
+    "hierarchy" is a matrix reveal the relationship among the contours.
+    詳情可看[朝良大大的CSDN](https://blog.csdn.net/vclearner2/article/details/120776685)
     
     def draw(drawPoints):
         for point in drawPoints:
