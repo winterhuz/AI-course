@@ -163,6 +163,8 @@ result 經剔除HSV範圍後的彩色圖片
     
         return x, y
 
+簡單解釋一下contour是個啥
+
         contours, hierarchy = cv2.findcontours(img, mode, method)
     "img" stands for binary image(black and white)  
     "mode" stands for the way to search the contour.  
