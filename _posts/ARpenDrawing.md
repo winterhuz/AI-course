@@ -169,7 +169,8 @@ result 經剔除HSV範圍後的彩色圖片
     "method" stands for the way to approximate the contour.  
     "contours" is a list of contour points,(n,x,y) as nst point and the coordinate.
     "hierarchy" is a matrix reveal the relationship among the contours.
-    詳情可看[朝良大大的CSDN](https://blog.csdn.net/vclearner2/article/details/120776685)
+    
+詳情可看[朝良大大的CSDN](https://blog.csdn.net/vclearner2/article/details/120776685)
     
     def draw(drawPoints):
         for point in drawPoints:
