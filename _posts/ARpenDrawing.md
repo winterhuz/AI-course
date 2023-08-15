@@ -207,5 +207,5 @@ result 經剔除HSV範圍後的彩色圖片
             break
 
 成果如下
-
+  
 ![](images/penDrawing_AdobeExpress.gif)
