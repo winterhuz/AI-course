@@ -19,11 +19,11 @@
 ----  
 
 首先環境配置了解一下
-/pycharm
-
-Python Package 安裝以下
-/numpy 1.24.4
-/opencv-python 4.8.0.74
+/pycharm   
+ 
+Python Package 安裝以下   
+/numpy 1.24.4   
+/opencv-python 4.8.0.74   
 
 
 
