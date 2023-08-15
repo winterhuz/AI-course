@@ -3,7 +3,7 @@
 剛好在網上看到一個道士憑空畫符的短影片，朱紅咒文循著道士的手指揮灑虛空    
 特效挺不錯就想著試試看    
 
-![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/penDrawing_AdobeExpress.gif)  
+
 
 拆解一下，大概分成兩個步驟   
 
@@ -209,5 +209,5 @@ result 經剔除HSV範圍後的彩色圖片
 
 成果如下
   
-
+![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/penDrawing_AdobeExpress.gif)  
   
