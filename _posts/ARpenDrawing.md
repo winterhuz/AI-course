@@ -156,11 +156,11 @@ result 經剔除HSV範圍後的彩色圖片
             drawPoints.append([penx, peny])  
 
     def findContour(img):
-        #初始化
+            #初始化
         x, y, w, h = -1, -1, -1, -1  
-        #將辨識物描邊並記錄  
+            #將辨識物描邊並記錄  
         contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)  
-        #對每個辨識物進行大小判定並近似成方框以利獲得辨識物座標  
+            #對每個辨識物進行大小判定並近似成方框以利獲得辨識物座標  
         for cnt in contours:
             area = cv2.contourArea(cnt)
             if area > 10:
