@@ -208,4 +208,4 @@ result 經剔除HSV範圍後的彩色圖片
 
 成果如下
 
-![]()
+![](images/penDrawing_AdobeExpress.gif)
