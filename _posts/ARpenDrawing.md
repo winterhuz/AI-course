@@ -131,7 +131,7 @@ result 經剔除HSV範圍後的彩色圖片
     
 目前為止我們已經可以辨識出特定的顏色，但圖片中可能會在別的地方也出現一樣的顏色  
 可能是噪點或其他物體，這時我們限制一下大小範圍以免誤判  
-這邊順帶將辨識出的物體描邊並紀錄座標   
+順帶將辨識出的物體描邊並紀錄座標   
 
 
     def findPen(img):
@@ -151,10 +151,9 @@ result 經剔除HSV範圍後的彩色圖片
 1
 
     def findContour(img):
-        contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
-        x, y, w, h = -1, -1, -1, -1
+        x, y, w, h = -1, -1, -1, -1  
+        contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)  
         for cnt in contours:
-     #       cv2.drawContours(imgContour, cnt, -1, (255, 0, 0), 2)
             area = cv2.contourArea(cnt)
             if area > 10:
                 peri = cv2.arcLength(cnt, True)
