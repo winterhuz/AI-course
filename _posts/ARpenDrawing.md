@@ -73,7 +73,7 @@ RGB在面對明度改變時三項皆會有牽連，而HSV則是單獨改動一�
 
 接著找出我們要辨識的顏色範圍。  
 具體操作是先建一個用來調整參數範圍的控制台    
-在這控制台上可以調整HSV三個參數的上下限，藉此鎖定物體  
+用這控制台調整HSV三個參數的上下限找出符合的參數，藉此鎖定物體  
 
     cv2.namedWindow('Trackbar')
     cv2.resizeWindow('Trackbar', 640, 320)
@@ -111,6 +111,9 @@ result 經剔除HSV範圍後的彩色圖片
         cv2.imshow('result', result)
         cv2.waitKey(1)
 
+調整到mask的白色圖像契合所要辨識的物體即完成   
+紀錄參數待之後使用  
+  
 這邊紀錄一下幾個基本語法  
         
         cv2.imread('img route')
@@ -134,36 +137,41 @@ result 經剔除HSV範圍後的彩色圖片
 順帶將辨識出的物體描邊並紀錄座標   
 
 
+至此，手指辨識部分可以整合成以下兩個副函式。  
+
     def findPen(img):
-        #    img = cv2.resize(img, (0, 0), fx=0.05, fy=0.05)
-        hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-    
+        #顏色辨識
         lower = np.array([93, 56, 70])
         upper = np.array([157, 194, 229])
-    
+        hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
         mask = cv2.inRange(hsv, lower, upper)
         result = cv2.bitwise_and(img, img, mask=mask)
+        #獲取辨識物座標
         penx, peny = findContour(mask)
+        #
         cv2.circle(imgContour, (penx, peny), 5, (253, 176, 192), cv2.FILLED)
-    
         if peny!=-1:
-            drawPoints.append([penx, peny])
-1
+            drawPoints.append([penx, peny])  
 
     def findContour(img):
+        #初始化
         x, y, w, h = -1, -1, -1, -1  
+        #將辨識物描邊並記錄  
         contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)  
+        #對每個辨識物進行大小判定並近似成方框以利獲得辨識物座標  
         for cnt in contours:
             area = cv2.contourArea(cnt)
             if area > 10:
                 peri = cv2.arcLength(cnt, True)
                 vertices = cv2.approxPolyDP(cnt, peri * 0.02, True)
                 x, y, w, h = cv2.boundingRect(vertices)
-    
         return x, y
 
-簡單解釋一下contour是個啥
-
+簡單解釋一下contour是個啥  
+已知圖像是由像素構成，那麼三角形的外輪廓也將由邊上無數個點構成  
+如此多的輪廓點會極大的拖慢程式運行速度，因此我們會需要approxPolyDP()近似  
+順路帶上一個語法  
+   
         contours, hierarchy = cv2.findcontours(img, mode, method)
     "img" stands for binary image(black and white)  
     "mode" stands for the way to search the contour.  
@@ -173,16 +181,20 @@ result 經剔除HSV範圍後的彩色圖片
     
 詳情可看
 [朝良大大的CSDN](https://blog.csdn.net/vclearner2/article/details/120776685)
-    
+
+
+最後加上連續輸出圓點的副函式
+
     def draw(drawPoints):
         for point in drawPoints:
             cv2.circle(imgContour, (point[0], point[1]), 15, (253, 176, 192), cv2.FILLED)
-        
+
+接著開始撰寫主程式，當條件允許時順序呼叫副程式並循環，在特定條件下結束。
+
     while True:
         ret, frame = cap.read()
     
         if ret:
-    
             frame = cv2.resize(frame, (0, 0), fx=0.4, fy=0.4)
             imgContour = frame.copy()
             findPen(frame)
