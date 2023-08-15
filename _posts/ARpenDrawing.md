@@ -121,21 +121,20 @@ result 經剔除HSV範圍後的彩色圖片
   
 這邊紀錄一下幾個基本語法  
         
-        cv2.imread('img route')
+        -cv2.imread('img route')
     "imgroute" stand for the complete route of the picture
-        cv2.resize(img, (x,y))
+        -cv2.resize(img, (x,y))
     "img" stands for your photo
     "x" stands for the width
     "y" stands for th height
-        cv2.resize(img, (0,0), fx=x, fy=y)
+        -cv2.resize(img, (0,0), fx=x, fy=y)
     "img" stands for your photo
     "x" stands for the rate of width, 1 as origin width
     "y" stands for the rate of height, 1 as origin height
-        cv2.rotate(img, rotatecode)
+        -cv2.rotate(img, rotatecode)
     "img" stands for your photo
     "rotatecode" stands for codes as "cv2.ROTATE_90_COUNTERCLOCKWISE","cv2.ROTATE_90_CLOCKWISE","cv2.ROTATE_180"
 
-    cv2.cvtColor(img,)
     
 目前為止已經可以辨識出特定的顏色，但圖片中可能會在別的地方也出現一樣的顏色  
 可能是噪點或其他物體，這時可以用大小範圍來判定是否為辨識物  
