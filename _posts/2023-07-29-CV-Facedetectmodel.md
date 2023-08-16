@@ -69,7 +69,7 @@ haar_eye_xml = 'haarcascade_eye.xml'
     #     cv2.destroyAllWindows()
 
 
-# 2、视频中的人脸检测
+2、视频中的人脸检测
 def dynamicDetect():
     '''
     打开摄像头，读取帧，检测帧中的人脸，扫描检测到的人脸中的眼睛，对人脸绘制蓝色的矩形框，对人眼绘制绿色的矩形框
