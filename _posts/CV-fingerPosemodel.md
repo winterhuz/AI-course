@@ -1,6 +1,8 @@
-import cv2
-import mediapipe as mp
-import imutils
+
+
+import cv2   
+import mediapipe as mp  
+import imutils  
 
 mpHands = mp.solutions.hands #mediapipe detect solutions
 hands = mpHands.Hands()
