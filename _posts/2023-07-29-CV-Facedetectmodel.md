@@ -47,26 +47,26 @@ import cv2
 haar_front_face_xml = 'haarcascade_frontalface_default.xml'
 haar_eye_xml = 'haarcascade_eye.xml'
 
-# # 1.静态图像中的人脸检测
-# def StaticDetect(filename):
-#     # 创建一个级联分类器 加载一个 .xml 分类器文件. 它既可以是Haar特征也可以是LBP特征的分类器.
-#     face_cascade = cv2.CascadeClassifier(haar_front_face_xml)
-#
-#     # 加载图像
-#     img = cv2.imread(filename)
-#     # 转换为灰度图
-#     gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-#     # 进行人脸检测，传入scaleFactor，minNegihbors，分别表示人脸检测过程中每次迭代时图像的压缩率以及
-#     # 每个人脸矩形保留近似数目的最小值
-#     # 返回人脸矩形数组
-#     faces = face_cascade.detectMultiScale(gray_img, 1.3, 5)
-#     for (x, y, w, h) in faces:
-#         # 在原图像上绘制矩形
-#         img = cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
-#     cv2.namedWindow('Face Detected!')
-#     cv2.imshow('Face Detected!', img)
-#     cv2.waitKey(0)
-#     cv2.destroyAllWindows()
+  # # 1.静态图像中的人脸检测
+  # def StaticDetect(filename):
+  #     # 创建一个级联分类器 加载一个 .xml 分类器文件. 它既可以是Haar特征也可以是LBP特征的分类器.
+  #     face_cascade = cv2.CascadeClassifier(haar_front_face_xml)
+  #
+  #     # 加载图像
+  #     img = cv2.imread(filename)
+  #     # 转换为灰度图
+  #     gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+  #     # 进行人脸检测，传入scaleFactor，minNegihbors，分别表示人脸检测过程中每次迭代时图像的压缩率以及
+  #     # 每个人脸矩形保留近似数目的最小值
+  #     # 返回人脸矩形数组
+  #     faces = face_cascade.detectMultiScale(gray_img, 1.3, 5)
+  #     for (x, y, w, h) in faces:
+  #         # 在原图像上绘制矩形
+  #         img = cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
+  #     cv2.namedWindow('Face Detected!')
+  #     cv2.imshow('Face Detected!', img)
+  #     cv2.waitKey(0)
+  #     cv2.destroyAllWindows()
 
 
 # 2、视频中的人脸检测
