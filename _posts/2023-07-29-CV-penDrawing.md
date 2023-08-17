@@ -215,7 +215,7 @@ result 經剔除HSV範圍後的彩色圖片
         if cv2.waitKey(20) == ord('q'):
             break
   
-## 實作成果  
+## 4.實作成果  
 成果如下
   
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/penDrawing_AdobeExpress.gif)  
