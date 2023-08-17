@@ -15,14 +15,15 @@ MidiaPipe Solutions 提供了ML 的多種預訓練模型
     import mediapipe as mp  
     import imutils  
 
-`midiapipe.solutions.hands` 是個會辨識出21個手部關節節點的模型，節點被稱之Landmarks
-`midiapipe.solutions.hands.Hands()` 則是模型參數的輸入點
+`midiapipe.solutions.hands` 是個會辨識出21個手部關節節點的模型，節點被稱之Landmarks  
+`midiapipe.solutions.hands.Hands()` 則是模型參數的輸入點，若空則為全數按初始值運行      
+在pycharm上可 `ctrl+lm` 函式檢視參數  
+  
+`static_image_mode`調整是否為影片流輸入，True則啟用手部追蹤False則一禎禎搜尋  
+`max_num_hands`調整畫面中有幾個手掌   
+`min_detection_confidence`為辨識物標記為手掌的信心值範圍   
+`min_tracking_confidence`為手部追蹤信心值範圍，與第一項掛勾  
 
-首項調整是否為影片流輸入，True則啟用手部追蹤False則一禎一禎搜尋，第四項為手部追蹤參數  
-第二項調整畫面中有幾個手掌，第三項為辨識物標記為手掌的信心值範圍  
-若空則為全數按初始值運行  
-
-在pycharm上可 'ctrl+lm' 該函式檢視可調參數
 
     mpHands = mp.solutions.hands
     hands = mpHands.Hands()
