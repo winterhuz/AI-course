@@ -177,7 +177,8 @@ result 經剔除HSV範圍後的彩色圖片
 
 簡單解釋一下contour是個啥  
 >已知圖像是由像素構成，那麼三角形的外輪廓也將由邊上無數個點構成  
->如此多的輪廓點會極大的拖慢程式運行速度，因此我們會需要approxPolyDP()近似  
+>如此多的輪廓點會極大的拖慢程式運行速度，因此我們會需要approxPolyDP()近似
+
 順路帶上一個語法  
    
         contours, hierarchy = cv2.findcontours(img, mode, method)
