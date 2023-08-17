@@ -4,7 +4,7 @@
 Midiapipe 是 Google Research 開發出的機器學習框架  
 可接受各種像是音源、傳感器、視頻輸入  
 MidiaPipe Solutions 提供了ML 的多種預訓練模型   
-像是`midiapipe.solutions.hands``midiapipe.solutions.face_mesh`等等
+像是`midiapipe.solutions.hands``midiapipe.solutions.face_mesh`等等  
 這次使用的是midiapipe的手部姿態辨識模型  
 
 一樣先匯入需要的函式庫
