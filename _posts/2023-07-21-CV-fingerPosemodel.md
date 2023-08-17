@@ -1,6 +1,7 @@
 繼上次使用opencv內建的人臉識別模型後  
 這次嘗試不同平台的模型，來看看使用上是否有落差
 
+---
 Midiapipe 是 Google Research 開發出的機器學習框架  
 可接受各種像是音源、傳感器、視頻輸入  
 MidiaPipe Solutions 提供了ML 的多種預訓練模型   
