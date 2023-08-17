@@ -19,7 +19,7 @@
 
 
 
-首先環境配置了解一下
+首先環境配置了解一下  
 /pycharm   
  
 Python Package 安裝以下   
