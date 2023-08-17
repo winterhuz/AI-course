@@ -58,33 +58,33 @@ n為手掌個數，陣列包含21個landmarks的(x,y,z)
 `enumerate()` 是一個可以將數據轉為同時列出編號及數據的序列的函式  
    
   
-  def draw_hand_connections(img, results):
-      if results.multi_hand_landmarks:
-          for handLms in results.multi_hand_landmarks:
-              for id, lm in enumerate(handLms.landmark):
-                  h, w, c=img.shape
-                  cx, cy =int(lm.x * w), int(lm.y * h)
-                  print(id, cx, cy)
-                  cv2.circle(img, (cx, cy), 5, (0, 255, 0), cv2.FILLED)
-                  mpDraw.draw_landmarks(img, handLms, mpHands.HAND_CONNECTIONS)
-          return img
-  def main():
-      cap = cv2.VideoCapture('VID_20230717_183754.mp4')
-  
-      while True:
-          success, img = cap.read()
-          if not success:
-              print("not recieving")
-              break
-          img = cv2.resize(img, (500, 500))
-          results = process_image(img)
-          draw_hand_connections(img, results)
-  
-          cv2.imshow("hand tracker", img)
-  
-          if cv2.waitKey(1) == ord('q'):
-              cap.release()
-              cv2.destroyAllWindows()
+    def draw_hand_connections(img, results):
+        if results.multi_hand_landmarks:
+            for handLms in results.multi_hand_landmarks:
+                for id, lm in enumerate(handLms.landmark):
+                    h, w, c=img.shape
+                    cx, cy =int(lm.x * w), int(lm.y * h)
+                    print(id, cx, cy)
+                    cv2.circle(img, (cx, cy), 5, (0, 255, 0), cv2.FILLED)
+                    mpDraw.draw_landmarks(img, handLms, mpHands.HAND_CONNECTIONS)
+            return img
+    def main():
+        cap = cv2.VideoCapture('VID_20230717_183754.mp4')
+    
+        while True:
+            success, img = cap.read()
+            if not success:
+                print("not recieving")
+                break
+            img = cv2.resize(img, (500, 500))
+            results = process_image(img)
+            draw_hand_connections(img, results)
+    
+            cv2.imshow("hand tracker", img)
+    
+            if cv2.waitKey(1) == ord('q'):
+                cap.release()
+                cv2.destroyAllWindows()
   
     if __name__ == "__main__":
         main()
