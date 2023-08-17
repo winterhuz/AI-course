@@ -86,8 +86,8 @@ n為手掌個數，陣列包含21個landmarks的(x,y,z)
               cap.release()
               cv2.destroyAllWindows()
   
-  if __name__ == "__main__":
-      main()
+    if __name__ == "__main__":
+        main()
     
 
 這次
