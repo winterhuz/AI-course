@@ -7,15 +7,15 @@ MidiaPipe Solutions 提供了ML 的多種預訓練模型
 像是`midiapipe.solutions.hands``midiapipe.solutions.face_mesh`等等  
 這次使用的是midiapipe的手部姿態辨識模型   
   
-可以參考 ![求得大整理的 Midiapipe 手部辨識模型詳情](https://blog.csdn.net/weixin_43229348/article/details/120530937)  
+主要參考 ![求得大翻譯的 Midiapipe 手部辨識模型詳情](https://blog.csdn.net/weixin_43229348/article/details/120530937)  
    
-他們的模型訓練方式是先訓練手掌的辨識模型
+這個模型的訓練方式是先訓練手掌的辨識模型
 主要由於三個原因
 1.手掌的邊緣更容易檢測
 2.手掌可用方形邊界框建模，減少錨點數
 3.手掌的目標與非極大值抑制算法較為契合
-辨識出手掌後才使用人工標注的樣本對手指關節進行回歸訓練   
-稍微了解模型原理之後就開始實際操作  
+辨識出手掌後才使用人工標注的樣本對手指關節位置進行回歸訓練   
+那稍微了解模型原理之後就開始實際操作  
 
 ---
   
@@ -32,7 +32,7 @@ MidiaPipe Solutions 提供了ML 的多種預訓練模型
 `max_num_hands`調整畫面中有幾個手掌   
 `min_detection_confidence`為辨識物標記為手掌的信心值範圍   
 `min_tracking_confidence`為手部追蹤信心值範圍，與第一項掛勾  
-在pycharm上可 `ctrl+lm` 函式檢視參數，若空則為全數按初始值運行   
+在pycharm上可 `ctrl+lm` 函式檢視參數，若括號為空則為全數按初始值運行   
   
     mpHands = mp.solutions.hands
     hands = mpHands.Hands()
@@ -68,9 +68,9 @@ n為手掌個數，陣列包含21個landmarks的(x,y,z)
                     cv2.circle(img, (cx, cy), 5, (0, 255, 0), cv2.FILLED)
                     mpDraw.draw_landmarks(img, handLms, mpHands.HAND_CONNECTIONS)
             return img
+            
     def main():
-        cap = cv2.VideoCapture('VID_20230717_183754.mp4')
-    
+        cap = cv2.VideoCapture('VID_20230717_183754.mp4')  
         while True:
             success, img = cap.read()
             if not success:
@@ -79,7 +79,6 @@ n為手掌個數，陣列包含21個landmarks的(x,y,z)
             img = cv2.resize(img, (500, 500))
             results = process_image(img)
             draw_hand_connections(img, results)
-    
             cv2.imshow("hand tracker", img)
     
             if cv2.waitKey(1) == ord('q'):
@@ -88,6 +87,8 @@ n為手掌個數，陣列包含21個landmarks的(x,y,z)
   
     if __name__ == "__main__":
         main()
-    
+
+結果呈現: ![]()
+這次使用midia
 
 這次
