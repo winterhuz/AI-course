@@ -5,20 +5,23 @@
 
 ---
 
+## 1.大綱
 拆解一下，大概分成兩個步驟   
 
-
 -辨識手指  
--文字隨手指出現並停留
-    
-    
-第一點打算用簡單一點的顏色辨識來完成  
-接著將影片分為無數揁，每一揁都辨識出手指的位置  
-得出手指位置在畫面的座標後，在該座標上畫一個小圓  
-隨著影片撥放，圓點連成線便成文字了。
+-手指留痕  
+  
+手指估計還需要用到模型，先不碰  
+實作這邊把手指改成筆頭，可以想像成有顏色的指套  
 
+第一點打算用簡單一點的顏色辨識+辨識物描框來完成  
+第二點試著土法煉鋼    
+將影片分為無數揁，每一揁都辨識出筆頭的位置  
+得出筆頭在畫面的世界座標後，在該座標上畫一個小圓  
+隨著影片撥放，圓點連成線便成文字了  
+  
 
-
+### 1.1環境
 首先環境配置了解一下  
 /pycharm   
  
@@ -28,9 +31,9 @@ Python Package 安裝以下
 
 
 
-### computer vision(cv)
+### 1.2 RGB & HSV
 
-///首先來科普一下  
+///先來科普一下  
 在電腦視覺中，所有的"顏色"都是用**特定參數組**表示的    
 差別只在於使用的哪種空間而已    
 
@@ -54,28 +57,28 @@ RGB在面對明度改變時三項皆會有牽連，而HSV則是單獨改動一�
 因為同個物體拍攝角度不同時在畫面上通常會在**明度**上有明顯差異，所以通常使用HSV空間來處理圖像  
 ///科普結束
 
----
+## 2.辨識筆頭  
 
-顏色辨識這邊基本思路如下  
+筆頭辨識這邊基本思路如下  
 1. 將RGB圖像空間轉到適合cv的HSV空間
-2. 找出欲辨識物體的HSV參數範圍
-3. 標記欲辨識物體   
-  
-  
-  
-     
+2. 找出辨識物的HSV參數範圍
+3. 標記辨識物(筆頭)   
+       
 來 ~ 開電腦   
 這次引用的函式庫有二，opencv的cv2函式庫及python numpy的 numpy  
 
     import cv2
     import numpy as np
-
-
-說了嘛，圖片要從RGB空間轉到HSV空間，有了cv2函式庫其實也就一段話的事
+    
+### 2.1 RGB to HSV  
+opencv函式在輸入圖片時不論是.png或.jpg檔  
+輸入格式都是用的BGR空間  
+而圖片要從RGB空間轉到HSV空間，有了cv2函式庫其實也就一段話的事  
 
     img = cv2.imread('連結.jpg')
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
+### 2.2 HSV range
 接著找出我們要辨識的顏色範圍。  
 具體操作是先建一個用來調整參數範圍的控制台    
 用這控制台調整HSV三個參數的上下限找出符合的參數，藉此鎖定物體  
@@ -133,14 +136,13 @@ result 經剔除HSV範圍後的彩色圖片
     "y" stands for the rate of height, 1 as origin height
         -cv2.rotate(img, rotatecode)
     "img" stands for your photo
-    "rotatecode" stands for codes as "cv2.ROTATE_90_COUNTERCLOCKWISE","cv2.ROTATE_90_CLOCKWISE","cv2.ROTATE_180"
-
-    
+    "rotatecode" stands for codes as "cv2.ROTATE_90_COUNTERCLOCKWISE","cv2.ROTATE_90_CLOCKWISE","cv2.ROTATE_180"   
+### 2.3 mark the thing
 目前為止已經可以辨識出特定的顏色，但圖片中可能會在別的地方也出現一樣的顏色  
 可能是噪點或其他物體，這時可以用大小範圍來判定是否為辨識物  
 順帶將辨識出的物體描邊並紀錄座標   
 
-至此，手指辨識部分可以整合成以下兩個副函式。  
+至此，筆頭辨識部分可以整合成以下兩個副函式。  
 
     def findPen(img):
             #顏色辨識
@@ -171,9 +173,10 @@ result 經剔除HSV範圍後的彩色圖片
                 x, y, w, h = cv2.boundingRect(vertices)
         return x, y
 
+
 簡單解釋一下contour是個啥  
-已知圖像是由像素構成，那麼三角形的外輪廓也將由邊上無數個點構成  
-如此多的輪廓點會極大的拖慢程式運行速度，因此我們會需要approxPolyDP()近似  
+>已知圖像是由像素構成，那麼三角形的外輪廓也將由邊上無數個點構成  
+>如此多的輪廓點會極大的拖慢程式運行速度，因此我們會需要approxPolyDP()近似  
 順路帶上一個語法  
    
         contours, hierarchy = cv2.findcontours(img, mode, method)
@@ -186,15 +189,18 @@ result 經剔除HSV範圍後的彩色圖片
 詳情可看
 [朝良大大的CSDN](https://blog.csdn.net/vclearner2/article/details/120776685)
 
+## 3.筆頭留痕
 
-最後加上連續輸出圓點的副函式
+如大綱所述，有了以上辨識出的辨識物座標  
+加上連續輸出圓點的副函式  
 
     def draw(drawPoints):
             #將所記錄之辨識物座標軌跡皆畫上實心圓，實現筆跡
         for point in drawPoints:
             cv2.circle(imgContour, (point[0], point[1]), 15, (253, 176, 192), cv2.FILLED)
 
-接著開始撰寫主程式，當條件允許時順序呼叫副程式並循環，在特定條件下結束。
+基本已經完成所有需要的功能，接著串起來就行  
+開始撰寫主程式，當條件允許時順序呼叫副程式並循環，在特定條件下結束。  
 
     while True:
         ret, frame = cap.read()  
@@ -208,7 +214,8 @@ result 經剔除HSV範圍後的彩色圖片
             break
         if cv2.waitKey(20) == ord('q'):
             break
-
+  
+## 實作成果  
 成果如下
   
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/penDrawing_AdobeExpress.gif)  
