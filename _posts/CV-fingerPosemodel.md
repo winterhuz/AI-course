@@ -9,12 +9,16 @@ MidiaPipe Solutions 提供了ML 的多種預訓練模型
   
 主要參考 ![求得大翻譯的 Midiapipe 手部辨識模型詳情](https://blog.csdn.net/weixin_43229348/article/details/120530937)  
    
-這個模型的訓練方式是先訓練手掌的辨識模型  
-主要由於三個原因
+這個模型的訓練過程挺很有趣就拿出來講講  
+為了訓練這個手指姿態模型他們先訓練了手掌的辨識模型  
+主要由於三個原因  
 1.手掌的邊緣更容易檢測  
 2.手掌可用方形邊界框建模，減少錨點數  
 3.手掌的目標與非極大值抑制算法較為契合  
 辨識出手掌後才使用人工標注的樣本對手指關節位置進行回歸訓練   
+也因為這些技術，在實作上可以看到儘管手指被手掌擋住了還是會有標點  
+且預測的通常都蠻準確的，有些意外的欣喜    
+
 那稍微了解模型原理之後就開始實際操作  
   
 ---
@@ -60,11 +64,14 @@ n為手掌個數，陣列包含21個landmarks的(x,y,z)
   
     def draw_hand_connections(img, results):
         if results.multi_hand_landmarks:
+              #標注每個手的各個landmark
             for handLms in results.multi_hand_landmarks:
                 for id, lm in enumerate(handLms.landmark):
+                      #將landmarks儲存的座標值轉為圖片內的絕對座標
                     h, w, c=img.shape
                     cx, cy =int(lm.x * w), int(lm.y * h)
                     print(id, cx, cy)
+                      #紅圓標注landmarks並用drawing.utils繪製連結
                     cv2.circle(img, (cx, cy), 5, (0, 255, 0), cv2.FILLED)
                     mpDraw.draw_landmarks(img, handLms, mpHands.HAND_CONNECTIONS)
             return img
@@ -76,7 +83,7 @@ n為手掌個數，陣列包含21個landmarks的(x,y,z)
             if not success:
                 print("not recieving")
                 break
-            img = cv2.resize(img, (500, 500))
+        #    img = cv2.resize(img, (500, 500))
             results = process_image(img)
             draw_hand_connections(img, results)
             cv2.imshow("hand tracker", img)
@@ -89,5 +96,9 @@ n為手掌個數，陣列包含21個landmarks的(x,y,z)
         main()
   
 結果呈現: ![](images/handtracking.gif)  
-這次使用Midiapipe  
 
+這次使用Midiapipe模型直觀的感受到  
+要使用別人的函式最直覺也最簡便的方式就是去看官網範例  
+因為自己個性喜歡追根究底，看別人分享常常會有
+"為甚麼這樣"
+關於函式的輸入輸出還有情境範例  
