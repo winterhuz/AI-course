@@ -28,7 +28,7 @@ Python Package 安裝以下
 
 
 
-# computer vision(cv)
+### computer vision(cv)
 
 ///首先來科普一下  
 在電腦視覺中，所有的"顏色"都是用**特定參數組**表示的    
