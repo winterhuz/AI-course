@@ -69,7 +69,8 @@
       Flag         四種分類器額外檢測的方式
       minSize/maxSize 限制成功檢定的目標區域大小
 ![官網連結](https://docs.opencv.org/4.x/d1/de5/classcv_1_1CascadeClassifier.html#aaf8181cb63968136476ec4204ffca498)
-     
+
+### 2.2 主程式
     def dynamicDetect():
 
         # 创建一个级联分类器 加载一个 .xml 分类器文件. 它既可以是Haar特征也可以是LBP特征的分类器.
@@ -101,9 +102,7 @@
                 if cv2.waitKey(1) & 0xff == ord('q'):
                     break
 
-    cv2.destroyAllWindows()
-
-
-if __name__ == '__main__':
-    dynamicDetect()
+    cv2.destroyAllWindows()  
+    if __name__ == '__main__':
+        dynamicDetect()
 
