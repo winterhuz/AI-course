@@ -54,10 +54,10 @@
 
 ### 2.1 cv2.CascadeClassifier()
 
-利用cv2.CascadeClassifier()建立該模型的分類器
+利用cv2.CascadeClassifier()建立該模型的分類器  
     cv2.CascadeClassifier("route")
       route stands for 分類器的絕對路徑
-    可以使用cv2.data.haarcascades代替.xml檔的資料夾路徑
+    可以使用cv2.data.haarcascades代替.xml檔的資料夾路徑  
 再使用cv2.CascadeClassifier()的子函式detectMultiScale()辨識物體
     detectMultiScale(img, object, scaleFactor, minNeighbors, Flag, minSize, maxSize)
       img 欲用以辨識的圖片
