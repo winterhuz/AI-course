@@ -51,23 +51,35 @@
 
     haar_front_face_xml = 'haarcascade_frontalface_default.xml'
     haar_eye_xml = 'haarcascade_eye.xml'
-    
-    2、视频中的人脸检测
+
+### 2.1 cv2.CascadeClassifier()
+
+利用cv2.CascadeClassifier()建立該模型的分類器
+    cv2.CascadeClassifier("route")
+      route stands for 分類器的絕對路徑
+    可以使用cv2.data.haarcascades代替.xml檔的資料夾路徑
+再使用cv2.CascadeClassifier()的子函式detectMultiScale()辨識物體
+    detectMultiScale(img, object, scaleFactor, minNeighbors, Flag, minSize, maxSize)
+      img 欲用以辨識的圖片
+      object       被檢測物體的矩形框(向量)
+      scaleFactor  每次搜索的矩形框大小增長系數
+      minNeighbors 構成成功檢測的最低鄰近矩形框個數
+      Flag         四種分類器額外檢測的方式
+      minSize/maxSize 限制成功檢定的目標區域大小
+![官網連結](https://docs.opencv.org/4.x/d1/de5/classcv_1_1CascadeClassifier.html#aaf8181cb63968136476ec4204ffca498)
+     
     def dynamicDetect():
-        '''
-        打开摄像头，读取帧，检测帧中的人脸，扫描检测到的人脸中的眼睛，对人脸绘制蓝色的矩形框，对人眼绘制绿色的矩形框
-        '''
+
         # 创建一个级联分类器 加载一个 .xml 分类器文件. 它既可以是Haar特征也可以是LBP特征的分类器.
         face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_alt.xml')
         eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye.xml')
-        # 打开摄像头
+        
         cap = cv2.VideoCapture('pexels-matthias-groeneveld-14691541 (2160p).mp4')
     
         while True:
             # 读取一帧图像
             ret, frame = cap.read()
-            # frame = #cv2.rotate(frame, cv2.ROTATE_90_COUNTERCLOCKWISE)
-            # 判断图片读取成功？
+            # frame = cv2.rotate(frame, cv2.ROTATE_90_COUNTERCLOCKWISE)
             if ret:
                 frame = cv2.resize(frame, (0, 0), fx=0.2, fy=0.2)
                 gray_img = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
