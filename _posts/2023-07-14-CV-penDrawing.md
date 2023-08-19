@@ -1,5 +1,11 @@
 # OPENCV_PROjECT
-
+---
+layout: post
+title: penDrawing
+author: [Huz]
+category: [self learing]
+tags: [jekyll, ai, opencv]
+---
 剛好在網上看到一個道士憑空畫符的短影片  
 朱紅咒文循著道士的手指揮灑虛空    
 特效挺不錯就想著試試看    
