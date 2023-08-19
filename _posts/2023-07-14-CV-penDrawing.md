@@ -3,7 +3,7 @@ layout: post
 title: penDrawing
 author: [Huz]
 category: [self learing]
-tags: [jekyll, ai, opencv]
+tags: [jekyll, opencv]
 ---
 
 剛好在網上看到一個道士憑空畫符的短影片  
