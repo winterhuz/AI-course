@@ -1,3 +1,11 @@
+---
+layout: post
+title: faceDetect
+author: [Huz]
+category: [self learing]
+tags: [jekyll, ai, opencv]
+---
+
 因為接著就要開始摸索神經網絡強化學習相關的東西了  
 這兩周打算從"會使用模型"、"了解模型原理"開始著手  
 第一個打算嘗試的就是OPENCV內建的人臉辨識模型 
