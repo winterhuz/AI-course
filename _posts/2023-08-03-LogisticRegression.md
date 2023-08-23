@@ -6,7 +6,7 @@ category: [self learing]
 tags: [jekyll, ai, NN]
 ---
 
-Neural Network 常常表示成 輸入->計算層->輸出
+Neural Network 常常表示成 輸入->計算層->輸出  
 我們就從單層計算層的網絡開始聊起，神經網絡到底是怎麼建構的
 
 ## 1. 網絡架構
