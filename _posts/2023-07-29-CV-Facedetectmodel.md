@@ -115,4 +115,5 @@ tags: [jekyll, ai, opencv]
     if __name__ == '__main__':
         dynamicDetect()
 ## 3. 實作成果
-![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/facedetect.gif)
+
+![final](https://github.com/winterhuz/AI-course/blob/gh-pages/images/facedetect.gif)<br>
