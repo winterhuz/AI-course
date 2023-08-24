@@ -6,10 +6,13 @@ category: [self learing]
 tags: [jekyll, ai, opencv]
 ---
 
+本周打算嘗試的就是OPENCV內建的人臉辨識模型
+
+---
 因為接著就要開始摸索神經網絡強化學習相關的東西了  
 這兩周打算從"會使用模型"、"了解模型原理"開始著手  
-第一個打算嘗試的就是OPENCV內建的人臉辨識模型 
- 
+
+  
 進入到 `lib/python3.8/site-packages/cv2/data`    
 可以看到裡面有大量的.xml文件，裡邊每一個都是預訓練的模型  
 由文件名可以知道都是使用了HAAR特徵訓練而得，那haar特徵述算又是甚麼呢?  
