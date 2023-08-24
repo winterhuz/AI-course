@@ -5,6 +5,10 @@ author: [Huz]
 category: [self learing]
 tags: [jekyll, ai, NN]
 ---
+
+有了基礎理論之後還得要有辦法實現阿
+
+---
 一樣先匯入需要的函式庫  
 
     import numpy as np
