@@ -1,5 +1,6 @@
 
 一樣先匯入需要的函式庫  
+
     import numpy as np
     import copy
     import matplotlib.pyplot as plt
