@@ -110,7 +110,7 @@ n為手掌個數，陣列包含21個landmarks的(x,y,z)
 
 ## 3. 成果
 
- ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/handtracking.gif)   
+ ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/handtracking.gif) <br>  
 
 這次使用Midiapipe模型直觀的感受到  
 要使用別人的函式最直覺也最簡便的方式就是直接去看"官網範例"  
