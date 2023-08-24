@@ -1,4 +1,10 @@
-
+---
+layout: post
+title: LogisticRegression-code
+author: [Huz]
+category: [self learing]
+tags: [jekyll, ai, NN]
+---
 一樣先匯入需要的函式庫  
 
     import numpy as np
