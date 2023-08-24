@@ -229,7 +229,8 @@ result 經剔除HSV範圍後的彩色圖片
 ![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/penDrawing_AdobeExpress.gif?raw=true)  
 
 
-缺陷可以說是相當巨大  
+想要的要素都有達到了  
+但可以改進的缺陷也很明顯  
 構成筆跡的圓點不夠密集無法形成柔順的筆畫  
 下筆與離筆沒有對應的方式，導致仍有筆跡判定  
   
@@ -239,6 +240,8 @@ result 經剔除HSV範圍後的彩色圖片
   
 不過這次主要是熟悉cv語法與處理圖片  
 也確實熟悉很多，有所收穫    
+
+<br> 
 
 期待實作到課堂，替換粉筆手與麥克墨水的那天  
   
