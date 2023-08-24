@@ -116,4 +116,4 @@ tags: [jekyll, ai, opencv]
         dynamicDetect()
 ## 3. 實作成果
 
-![final](https://github.com/winterhuz/AI-course/blob/gh-pages/images/facedetect.gif)<br>
+![final](https://github.com/winterhuz/AI-course/blob/gh-pages/images/facedetect.gif?raw=true)<br>
