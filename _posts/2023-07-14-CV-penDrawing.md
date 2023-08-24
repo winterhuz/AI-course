@@ -226,7 +226,7 @@ result 經剔除HSV範圍後的彩色圖片
 ## 4.實作成果  
 成果如下
   
-![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/penDrawing_AdobeExpress.gif)  
+![](https://github.com/winterhuz/AI-course/blob/gh-pages/images/penDrawing_AdobeExpress.gif?raw=true)  
 
 
 缺陷可以說是相當巨大  
