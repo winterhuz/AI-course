@@ -128,23 +128,22 @@ def optimize(w, b, X, Y, num_iterations=100, learning_rate=0.009, print_cost=Fal
 ### 2.2 整合
 
     def model(X_train, Y_train, X_test, Y_test, num_iterations=2000, learning_rate=0.5, print_cost=False):
-    w, b = initialize_with_zeros(X_train.shape[1])
-    params, grads, costs = optimize(w, b, X_train, Y_train, num_iterations=100, learning_rate=0.009, print_cost=False)
-    w = params["w"]
-    b = params["b"]
-    Y_prediction_test = predict(w, b, X_test)
-    Y_prediction_train = predict(w, b, X_train)
-    if print_cost:
-        print("train accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_train - Y_train)) * 100))
-        print("test accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_test - Y_test)) * 100))
-
     
-    d = {"costs": costs,
-         "Y_prediction_test": Y_prediction_test, 
-         "Y_prediction_train" : Y_prediction_train, 
-         "w" : w, 
-         "b" : b,
-         "learning_rate" : learning_rate,
-         "num_iterations": num_iterations}
-    
+            w, b = initialize_with_zeros(X_train.shape[1])
+            params, grads, costs = optimize(w, b, X_train, Y_train, num_iterations=100, learning_rate=0.009, print_cost=False)
+            w = params["w"]
+            b = params["b"]
+            Y_prediction_test = predict(w, b, X_test)
+            Y_prediction_train = predict(w, b, X_train)
+            if print_cost:
+                print("train accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_train - Y_train)) * 100))
+                print("test accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_test - Y_test)) * 100))
+            
+            d = {"costs": costs,
+                 "Y_prediction_test": Y_prediction_test, 
+                 "Y_prediction_train" : Y_prediction_train, 
+                 "w" : w, 
+                 "b" : b,
+                 "learning_rate" : learning_rate,
+                 "num_iterations": num_iterations}
     return d
