@@ -107,3 +107,44 @@ def optimize(w, b, X, Y, num_iterations=100, learning_rate=0.009, print_cost=Fal
              "db": db}
     
     return params, grads, costs
+### 2.1 預測
+
+先前訓練過程中我們把預測值A與實際值y做比較   
+如今訓練大成，是時候讓 A 來判斷了  
+    def predict(w, b, X):
+        m = X.shape[1]
+        Y_prediction = np.zeros((1, m))
+        w = w.reshape(X.shape[0], 1)
+    
+        A = 1 / (1 + np.exp(-(np.dot(w.T, X) + b)))
+        for i in range(A.shape[1]):
+            if A[0, i] >0.5:
+                Y_prediction[0,i] = 1
+            else:
+                Y_prediction[0,i] = 0
+    return Y_prediction
+此時 Y_prediction 內部為一排0101的陣列
+
+### 2.2 整合
+
+    def model(X_train, Y_train, X_test, Y_test, num_iterations=2000, learning_rate=0.5, print_cost=False):
+    w, b = initialize_with_zeros(X_train.shape[1])
+    params, grads, costs = optimize(w, b, X_train, Y_train, num_iterations=100, learning_rate=0.009, print_cost=False)
+    w = params["w"]
+    b = params["b"]
+    Y_prediction_test = predict(w, b, X_test)
+    Y_prediction_train = predict(w, b, X_train)
+    if print_cost:
+        print("train accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_train - Y_train)) * 100))
+        print("test accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_test - Y_test)) * 100))
+
+    
+    d = {"costs": costs,
+         "Y_prediction_test": Y_prediction_test, 
+         "Y_prediction_train" : Y_prediction_train, 
+         "w" : w, 
+         "b" : b,
+         "learning_rate" : learning_rate,
+         "num_iterations": num_iterations}
+    
+    return d
